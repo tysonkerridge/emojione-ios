@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author           = { 'Alex Yip' => 'support@emojione.com' }
   s.source           = { :git => 'https://github.com/emojione/emojione-ios.git', :tag => "v#{s.version.to_s}" }
   s.social_media_url = 'https://twitter.com/emojione'
-  s.ios.deployment_target = '11.0'
+  s.ios.deployment_target = '10.0'
   s.source_files = 'Emojione/Emojione/*.swift'
   s.swift_version = '4.1'
 end
