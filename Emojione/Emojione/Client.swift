@@ -103,7 +103,7 @@ public class Client: ClientInterface {
         }
 
         return regexReplace(regexString: shortcodeRegEx, string: result) { shortcode -> String in
-            return ruleset.getShortcodeReplace()[shortcode]?.0 ?? shortcode
+            return ruleset.getShortcodeReplace()[shortcode]?[0] ?? shortcode
         }
     }
 
@@ -182,7 +182,7 @@ public class Client: ClientInterface {
 
             guard let shortcode = ruleset.getUnicodeReplace()[hexString] ?? (greedyMatch ? ruleset.getUnicodeReplaceGreedy()[hexString] : nil) else { return nil }
 
-            guard let filename = ruleset.getShortcodeReplace()[shortcode]?.1 else { return nil }
+            guard let filename = ruleset.getShortcodeReplace()[shortcode]?[1] else { return nil }
 
             return getEmojiImage(filename: filename)
         }
@@ -371,7 +371,7 @@ public class Client: ClientInterface {
 
         guard let shortcode = ruleset.getUnicodeReplace()[hexString] ?? (greedyMatch ? ruleset.getUnicodeReplaceGreedy()[hexString] : nil) else { return nil }
 
-        guard let filename = ruleset.getShortcodeReplace()[shortcode]?.1 else { return nil }
+        guard let filename = ruleset.getShortcodeReplace()[shortcode]?[1] else { return nil }
 
         return filename
     }

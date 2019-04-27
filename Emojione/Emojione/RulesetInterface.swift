@@ -10,13 +10,13 @@ import Foundation
 
 public protocol RulesetInterface {
 
-    /// Returns the shortcode unicode replacement rules
+    /// Returns the shortcode unicode replacement rules. Array contains two values: the first index being the unicode representation, second being the emoji filename.
 
     /**
      Returns the shortcode unicode replacement rules
      */
 
-    func getShortcodeReplace() -> [String: (String, String)]
+    func getShortcodeReplace() -> [String: [String]]
 
     /// Returns the ascii unicode replacement rules
 
