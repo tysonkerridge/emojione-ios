@@ -134,4 +134,17 @@ class ClientTests: XCTestCase {
 
         self.wait(for: [expectation], timeout: 5.0)
     }
+    
+    func testShortcodeMap() {
+        measure {
+            client.getShortcodeMapping()
+        }
+    }
+    
+    func testUnicodeMap() {
+        measure {
+            client.getUnicodeMapping()
+        }
+    }
+    
 }

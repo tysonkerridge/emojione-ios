@@ -9,6 +9,12 @@
 import Foundation
 
 public class Client: ClientInterface {
+    public func getShortcodeMapping() {
+        _ = ruleset.getShortcodeReplace()
+    }
+    public func getUnicodeMapping() {
+        _ = ruleset.getUnicodeReplace()
+    }
 
     public var ascii: Bool = false  // convert ascii smileys?
     public var riskyMatchAscii: Bool = false  // set true to match ascii without leading/trailing space char

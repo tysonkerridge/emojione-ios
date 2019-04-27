@@ -9,6 +9,8 @@
 import Foundation
 
 public protocol ClientInterface {
+    func getShortcodeMapping()
+    func getUnicodeMapping()
 
     /// First pass changes unicode characters into emoji markup.
     /// Second pass changes any shortnames into emoji markup.
